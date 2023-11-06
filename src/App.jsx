@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import MainGalleryLayout from "./components/MainGalleryLayout";
+import GalleryDataContext from "./context/GalaryDataContext";
+import data from "./mock-data/data.json";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [gridItems, setGridItems] = useState([]);
+  const [selectedArr, setSelectedArr] = useState([]);
+
+  useEffect(() => {
+    setGridItems([...data]);
+  }, []);
+
+  function handleDelete() {
+    const updatedArray = gridItems.filter(
+      (item) => !selectedArr.includes(item.id)
+    );
+
+    setGridItems([...updatedArray]);
+    setSelectedArr([]);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <GalleryDataContext.Provider
+      value={{
+        selectedArr,
+        setSelectedArr,
+        gridItems,
+        setGridItems,
+        handleDelete,
+      }}
+    >
+      <div className="w-full h-fit flex justify-center pb-10 ">
+        <div className="w-11/12 md:w-8/12 border h-fit border-black mt-5 rounded-xl shadow-md shadow-gray-500 bg-gray-100">
+          <Header />
+          <hr className="border border-gray-300"></hr>
+          <MainGalleryLayout />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </GalleryDataContext.Provider>
+  );
 }
 
-export default App
+export default App;
