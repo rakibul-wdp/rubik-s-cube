@@ -1,7 +1,7 @@
 import { StatusCodes } from "http-status-codes";
+import API_Error from "../../../error/apiError";
 import { IBooking } from "./booking.interface";
 import { Booking } from "./booking.model";
-import API_Error from "../../../error/apiError";
 
 const createBookingFromDB = async (data: IBooking): Promise<IBooking> => {
   const existBooking = await Booking.findOne({
