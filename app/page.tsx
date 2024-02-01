@@ -35,9 +35,11 @@ export default function Home() {
             <Image
               src={PLL.image}
               alt="oll algo"
-              className={`${PLL.id === 5 && "rotate-90"} ${
-                PLL.id === 6 && "rotate-180"
-              } ${PLL.id === 9 && "-rotate-90"}`}
+              className={`${
+                (PLL.id === 5 || PLL.id === 18 || PLL.id == 20) && "rotate-90"
+              } ${(PLL.id === 6 || PLL.id == 21) && "rotate-180"} ${
+                PLL.id === 9 && "-rotate-90"
+              }`}
             />
             <h2 className="text-primary text-2xl tracking-wide font-bold w-60">
               {PLL.algo}
