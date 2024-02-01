@@ -1,4 +1,4 @@
-import { INavLinks, IOLLs } from "@/interface";
+import { INavLinks, IOLLPLLs } from "@/interface";
 import {
   antiSune26,
   bowtie25,
@@ -12,6 +12,7 @@ import {
   sune27,
   t24,
 } from "../assets/images/oll";
+import { ua } from "../assets/images/pll";
 
 export const navLinks: INavLinks[] = [
   {
@@ -36,7 +37,7 @@ export const navLinks: INavLinks[] = [
   },
 ];
 
-export const OLLs: IOLLs[] = [
+export const OLLs: IOLLPLLs[] = [
   {
     id: 1,
     name: "27 SUNE",

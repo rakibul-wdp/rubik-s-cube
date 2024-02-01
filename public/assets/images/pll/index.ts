@@ -4,7 +4,7 @@ import e from "./e.png";
 import f from "./f.png";
 import ga from "./ga.png";
 import gb from "./gb.png";
-import gc from "./gc.png";
+import Gc from "./gc.png";
 import gd from "./gd.png";
 import h from "./h.png";
 import ja from "./ja.png";
@@ -27,7 +27,7 @@ export {
   f,
   ga,
   gb,
-  gc,
+  Gc,
   gd,
   h,
   ja,

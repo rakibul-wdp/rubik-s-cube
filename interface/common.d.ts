@@ -6,7 +6,7 @@ export interface INavLinks {
   path: string;
 }
 
-export interface IOLLs {
+export interface IOLLPLLs {
   id: number;
   name: string;
   algo: string;
