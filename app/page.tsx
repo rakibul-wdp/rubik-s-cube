@@ -12,7 +12,11 @@ export default function Home() {
             key={OLL.id}
           >
             <h2>{OLL.name}</h2>
-            <Image src={OLL.image} alt="oll algo" />
+            <Image
+              src={OLL.image}
+              alt="oll algo"
+              className={`${(OLL.id === 4 || OLL.id === 10) && "rotate-180"}`}
+            />
             <h2 className="text-primary text-2xl tracking-wide font-bold">
               {OLL.algo}
             </h2>
@@ -28,7 +32,13 @@ export default function Home() {
             key={PLL.id}
           >
             <h2>{PLL.name}</h2>
-            <Image src={PLL.image} alt="oll algo" />
+            <Image
+              src={PLL.image}
+              alt="oll algo"
+              className={`${PLL.id === 5 && "rotate-90"} ${
+                PLL.id === 6 && "rotate-180"
+              } ${PLL.id === 9 && "-rotate-90"}`}
+            />
             <h2 className="text-primary text-2xl tracking-wide font-bold w-60">
               {PLL.algo}
             </h2>

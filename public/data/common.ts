@@ -12,7 +12,6 @@ import {
   sune27,
   t24,
 } from "../assets/images/oll";
-import { ua } from "../assets/images/pll";
 
 export const navLinks: INavLinks[] = [
   {
