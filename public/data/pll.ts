@@ -27,7 +27,7 @@ export const PLLs: IOLLPLLs[] = [
   {
     id: 1,
     name: "Ua Perm",
-    algo: "2M' U M 2U M' U 2M' 2M' U M' 2U M U 2M' R U' R U R U R U' R' U' 2R",
+    algo: "2M' U M 2U M' U 2M'",
     image: ua,
   },
   {
