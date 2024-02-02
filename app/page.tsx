@@ -35,6 +35,8 @@ export default function Home() {
             <Image
               src={PLL.image}
               alt="oll algo"
+              width="150"
+              height="150"
               className={`${PLL.id === 5 && "rotate-90"} ${
                 PLL.id === 6 && "rotate-180"
               } ${PLL.id === 9 && "-rotate-90"}`}
