@@ -1,9 +1,9 @@
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import MainLayout from "./layout/Layout";
-import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
 import MobileDetails from "./components/home/MobileDetails";
+import MainLayout from "./layout/Layout";
 
 function App() {
   return (
