@@ -64,9 +64,9 @@ const AllMobiles = () => {
   };
 
   return (
-    <div className="my-20 container mx-auto lg:px-0 px-4">
+    <div className="mt-5 mb-20 container mx-auto lg:px-0 px-4">
       <h3 className="text-center text-3xl ">All Mobiles</h3>
-      <div className=" mt-20">
+      <div className="mt-5">
         <div className=" flex justify-end">
           {(searchTerm ||
             brandSelect ||
