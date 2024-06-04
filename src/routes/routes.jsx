@@ -14,6 +14,7 @@ import ProductDetails from "../pages/ProductDetails";
 import Registration from "../pages/Registration";
 import PrivateRoute from "./private/PrivateRoute";
 import Contact from "../pages/Contact";
+import Categories from "../pages/Categories";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: () => fetch("http://localhost:5000/shoes"),
+      },
+      {
+        path: "/categories",
+        element: <Categories />,
       },
       {
         path: "/products/:id",

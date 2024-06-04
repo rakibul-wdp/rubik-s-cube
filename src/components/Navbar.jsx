@@ -36,6 +36,9 @@ const Navbar = () => {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
+              <Link to={"/categories"}>Categories</Link>
+            </li>
+            <li>
               <Link to={"/about"}>About Us</Link>
             </li>
             <li>
@@ -74,6 +77,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-lg font-medium">
           <li>
             <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/categories"}>Categories</Link>
           </li>
           <li>
             <Link to={"/about"}>About Us</Link>
