@@ -36,7 +36,10 @@ const Navbar = () => {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <Link to={"/about"}>About Us</Link>
+            </li>
+            <li>
+              <Link to={"/contact"}>Contact Us</Link>
             </li>
             {!user && (
               <>
@@ -73,7 +76,10 @@ const Navbar = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/about"}>About</Link>
+            <Link to={"/about"}>About Us</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contact Us</Link>
           </li>
           {!user && (
             <>

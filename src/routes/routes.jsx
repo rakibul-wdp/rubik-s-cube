@@ -13,6 +13,7 @@ import Login from "../pages/Login";
 import ProductDetails from "../pages/ProductDetails";
 import Registration from "../pages/Registration";
 import PrivateRoute from "./private/PrivateRoute";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/login",
