@@ -1,6 +1,6 @@
 import { useState } from "react";
-import GoogleLogin from "../components/Login-Registration/GoogleLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import GoogleLogin from "../components/Login-Registration/GoogleLogin";
 import useAuth from "../hooks/useAuth";
 
 const Registration = () => {
@@ -33,7 +33,7 @@ const Registration = () => {
             email: data?.user?.email,
             name: name,
           };
-          fetch("https://stride-final-project-server.vercel.app/user", {
+          fetch("http://localhost:5000/user", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import useAuth from "../hooks/useAuth";
 import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const Dashboard = () => {
   const { user } = useAuth();
   const [userInfo, setUserInfo] = useState();
 
   useEffect(() => {
-    fetch(`https://stride-final-project-server.vercel.app/user/${user?.email}`)
+    fetch(`http://localhost:5000/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);

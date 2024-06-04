@@ -14,7 +14,7 @@ const AddProducts = () => {
 
     const data = { title, brand, price, description, image_url };
 
-    await fetch("https://stride-final-project-server.vercel.app/shoes", {
+    await fetch("http://localhost:5000/shoes", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

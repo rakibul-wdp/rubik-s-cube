@@ -5,7 +5,7 @@ const AllProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://stride-final-project-server.vercel.app/shoes")
+    fetch("http://localhost:5000/shoes")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
