@@ -14,7 +14,7 @@ const AddProducts = () => {
 
     const data = { title, brand, price, description, image_url };
 
-    await fetch("http://localhost:5000/shoes", {
+    await fetch("https://rubik-s-cube-api.vercel.app/cubes", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

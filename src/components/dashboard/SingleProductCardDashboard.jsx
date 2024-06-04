@@ -8,7 +8,7 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
   const { _id, title, brand, price, description, image_url } = shoe;
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:5000/shoes/${_id}`, {
+    await fetch(`https://rubik-s-cube-api.vercel.app/cubes/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

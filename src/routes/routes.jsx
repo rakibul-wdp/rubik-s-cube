@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout";
 import About from "../pages/About";
 import AddProducts from "../pages/AddProducts";
 import AllProducts from "../pages/AllProducts";
+import Categories from "../pages/Categories";
+import Contact from "../pages/Contact";
 import Dashboard from "../pages/Dashboard";
 import EditProducts from "../pages/EditProducts";
 import EditProfile from "../pages/EditProfile";
@@ -13,8 +15,6 @@ import Login from "../pages/Login";
 import ProductDetails from "../pages/ProductDetails";
 import Registration from "../pages/Registration";
 import PrivateRoute from "./private/PrivateRoute";
-import Contact from "../pages/Contact";
-import Categories from "../pages/Categories";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/shoes"),
+        loader: () => fetch("https://rubik-s-cube-api.vercel.app/cubes"),
       },
       {
         path: "/categories",
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/shoes/${params.id}`),
+          fetch(`https://rubik-s-cube-api.vercel.app/cubes/${params.id}`),
       },
       {
         path: "/about",
@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/user/get/${params.id}`),
+          fetch(`https://rubik-s-cube-api.vercel.app/user/get/${params.id}`),
       },
       {
         path: "all-products",
@@ -102,7 +102,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/shoes/${params.id}`),
+          fetch(`https://rubik-s-cube-api.vercel.app/cubes/${params.id}`),
       },
     ],
   },
