@@ -12,7 +12,6 @@ const Dashboard = () => {
       .then((data) => setUserInfo(data));
   }, [user]);
 
-  console.log(userInfo);
   return (
     <div>
       <div className="flex justify-between mb-7">
