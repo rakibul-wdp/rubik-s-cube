@@ -24,7 +24,7 @@ export default function Home() {
         ))}
       </div>
 
-      <h1 className="text-2xl font-bold mt-5 mb-2 ml-2">OLL&rarr;</h1>
+      <h1 className="text-2xl font-bold mt-5 mb-2 ml-2">PLL&rarr;</h1>
       <div className="flex flex-wrap items-center justify-center gap-14">
         {PLLs.map((PLL) => (
           <div
